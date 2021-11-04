@@ -1,0 +1,80 @@
+\documentclass[11pt]{jsarticle}
+\usepackage{amsmath}
+\begin{document}
+レポート2\\
+\begin{flushright}
+  205713B\ 朝比奈太郎
+\end{flushright}
+
+pascal分布の確率関数は、次式で定義されている。\\
+\[
+P(X = k) = \frac{1}{1+\mu}(\frac{\mu}{1+\mu})^k \ \ \ \ \ \ \
+(\mu > 0, k = 0,1,2, ...)
+\]
+確率変数であることを証明し、期待値と分散を求めよ。\\
+\\
+Answer\\
+確率変数である条件は、 
+\[
+0 <= P(X) <= 1 かつ　\sum P(X = k) = 1
+\]
+であることから、
+\[
+0 <= \frac{1}{1+\mu}(\frac{\mu}{1+\mu})^k <= 1
+\]
+となる。
+また、
+\[
+p = \frac{1}{1+\mu}, \ q^{k-1} = (\frac{\mu}{1+\mu})^k
+\]とすると
+\[
+\sum _{k=0}^{\infty} P(X = k) = \sum _{k=0}^{\infty} q^{k-1} p = p * \frac{1}{1-q} = 1
+\]となる。
+従って、与式は確率変数といえる。\\
+
+確率分布が幾何分布に従うので、Xの期待値は、
+\[
+E(X) = \sum _{k=0}^{\infty}kP(X = k) = \sum _{k=0}^{\infty}kp^{k}(1-p) = (1-p)p* \sum _{k=0}^{\infty} k*p^{k-1} ...(1)
+\]
+である。右辺の総和を求めるために、関数 1/(1-p)のテーラ展開に着目すると、
+\[
+\frac{1}{1-p} = 1+p+p^2+... = \sum _{k=0}^{\infty}p^k
+\]
+左辺の微分は、
+\[
+(\frac{1}{1-p})' = \frac{1}{(1-p)^2}
+\]
+であり、右辺の微分は、
+\[
+(\sum _{k=0}^{\infty}p^k)' = \sum _{k=0}^{\infty}kp^{k-1}
+\]
+であるので、
+\[
+\frac{1}{(1-p)^2} = \sum _{k=0}^{\infty}kp^{k-1}
+\]
+となる。これを(1)に代入すると、
+\[
+E[X] = (1-p)p \frac{1}{(1-p)^2} = \frac{p}{1-p}
+\]
+また、分散は二乗期待値と期待値の二乗の差に等しいことから、
+求める分散をV(X)とすると,E(X) = 1/pより
+\[
+V(X) = E[X^2] - \frac{1}{p^2}
+\]
+\[
+E[X^2] =  \sum _{k=0}^{\infty}k^2(1-p)p^k =  (1-p)p\sum _{k=0}^{\infty}k^2p^{k-1}
+\]
+テイラー展開に対して、両辺をpについて2回微分する。
+\[
+\frac{2}{(1-p)^3} = \sum _{k=0}^{\infty}k(1-p)p^{k-2}
+\]
+両辺にpをかける。
+\[
+\frac{2p}{(1-p)^3} = \sum _{k=0}^{\infty}k(1-p)p^{k-1} =  \sum _{k=0}^{\infty}k^2p^{k-1} -  \sum _{k=0}^{\infty}kp^{k-1} =  \sum _{k=0}^{\infty}k^2p^{k-1} - \frac{1}{(1-p)^2}
+\]
+よって、
+\[
+E[X^2] = \frac{2p^2}{(1-p)^2} + \frac{p}{1-p}
+V[X] = E[X^2] - E[X]^2 = \frac{2p^2}{(1-p)^2} + \frac{p}{1-p} - \frac{p^2}{(1-p)^2} = \frac{p}{(1-p)^2}
+\]
+\end{document}

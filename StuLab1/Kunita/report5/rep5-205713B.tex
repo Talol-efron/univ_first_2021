@@ -1,0 +1,60 @@
+\documentclass[a4paper, 11pt, titlepage]{jsarticle}
+\usepackage{listings}
+\usepackage[dvipdfm]{graphicx}
+
+\title {知能情報実験1 : レポート課題5}
+\author{205713B  朝比奈 太郎}
+\date{\today }
+
+\begin{document}
+\maketitle
+\tableofcontents
+\clearpage
+
+\section{目的}
+Numpyは行列処理に適しており、画像は画素を２次元的に配置した集まりである。従って、Numpyを用いて画像処理を行うことは適切であると確かめるため。
+また、画像をNumpy行列として扱う理由は画像の大きさは画像の画素の数、すなわち高さ方向の画素数(行列)*幅方向の画素数(列数)で表現されるから。
+\section{方法}
+\subsection{コーディング環境}
+\begin{itemize}
+\item PCのスペック: MacBook Air Core i5
+\item 使用言語: Python
+\item 使用ライブラリ: matplotlib.image, matplotlib.pyplot, numpy
+\end{itemize}
+\subsection{検証内容}
+まず講義資料から、img\_x.pngとimg\_y.pngをダウンロードした。
+講義内容や講義資料を参考にしながらimg\_x.pngとimg\_y.pngを加算、減算、白黒反転をそれぞれの問い(問1,2,3)に沿って行った。
+\subsection{画像の絵画方法}
+\_\_main\_\_.py とは別に同じディレクトリ下にmodule\_img.pyというファイルを作成し、その中に画像を絵画するための関数plot\_img(img)を作成した。
+\clearpage
+\section{結果}
+\subsection{2.3の画像の絵画方法のソースコード}
+\lstinputlisting[language=Python, numbers=left, breaklines=true, basicstyle=\ttfamily\footnotesize, frame=single, caption=module\_img.py,
+label=pg:sample]{module_img.py}
+\subsection{問1}
+\lstinputlisting[language=Python, numbers=left, breaklines=true, basicstyle=\ttfamily\footnotesize, frame=single, caption=問1,
+label=pg:sample]{__main1__.py}
+\clearpage
+\subsection{問2}
+\lstinputlisting[language=Python, numbers=left, breaklines=true, basicstyle=\ttfamily\footnotesize, frame=single, caption=問2,
+label=pg:sample]{__main2__.py}
+
+\subsection{問3}
+\lstinputlisting[language=Python, numbers=left, breaklines=true, basicstyle=\ttfamily\footnotesize, frame=single, caption=問3,
+label=pg:sample]{__main3__.py}
+\clearpage
+
+\section{考察}
+まず、画素の濃度は0-255までの256階調あり、0に近づくほど濃度が低くなり(暗くなり),255に近づくほど濃度が高くなる(明るくなる)。Numpyの減算関数(substract(X,Y))を用いると、X - Yが行われる。従って、substract(255, x)を行うと、画像はNumpy行列として扱えることから白黒反転した画像が出力される。
+問1では、画像xと画像yの加算画像をsubstractを用いて白黒反転したので、画像xと画像yを加算した画像を画像P'とすると、P’にsubstractの処理を加えて画像Pが生成されたということである。
+問2では、画像xを白黒反転したものをx' ,画像yを白黒反転したのもをy'とすると、x'とy'の加算画像はPとなり、Pが生成されたということである。
+問3では、画像x'に画像yを減算するということは、画像x'に画像y'を加算することと意味が等しいことから問2同様、画像Pが生成されたということである。
+問1と問2では、白黒反転することと加算することの順番が異なるだけであるから、本質的には問1も問２同様に画像Pを生成したと言える。
+ゆえに、問1,2,3は演算プロセスは異なるものの同一の画像が生成されるといえる。
+
+\begin{thebibliography}{99}
+\bibitem{kunita} 國田 樹, 2021\_StuLab1\_理工系のレポート作成技術 , 2021/06/10.
+\bibitem{Tex} Latex入門/図表, https://texwiki.texjp.org/?LaTeX, 2021/06/10
+\bibitem{LaTex} LaTeX 箇条書き, http://www.yamamo10.jp/yamamoto/comp/latex/make\_doc/item/item.php , 2021/06/10
+\end{thebibliography}
+\end{document}

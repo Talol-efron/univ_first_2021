@@ -1,0 +1,70 @@
+\documentclass[a4paper, 11pt, titlepage]{jsarticle}
+\usepackage{listings}
+
+\title {知能情報実験1 : レポート課題3}
+\author{205713B  朝比奈 太郎}
+\date{\today }
+
+\begin{document}
+\maketitle
+\tableofcontents
+\clearpage
+
+\section{課題A}
+図は、平均気温($^\circ$C),全天日射量(MJ/$m^2$)における時系列変動を示している。平均気温が最も高いのは、9月の約30$^\circ$Cであり最も低いのは2月の約17$^\circ$Cとなっている。また、全天日射量が最も多いのは、5月の約21MJ/$m^2$であり最も低いのは1月の約8MJ/$m^2$となっている。\\
+\ \ 図によって、平均気温と全天日射量の間に正の相関はあるといえるが、非常に強い正の相関(0.9以上)は見られなかった。なぜならば、平均気温が最も高い月と全天日射量が最も多い月は9月と5月でありその間には4ヶ月もの差があったからだ。また、梅雨の時期である5月や6月に全天日射量が多いといえるため、全天日射量と空に対する雲の割合には相互に関係がある可能性がある。その関係性を明らかにするためには、全天日射量と空に対する雲の割合を同時に観察及び計測する必要がある。
+
+\section{課題B}
+\subsection{問12}
+\lstinputlisting[language=Python, numbers=left, breaklines=true, basicstyle=\ttfamily\footnotesize, frame=single, caption=サンプルプログラム12, 
+label=pg:sample]{sample12.py}
+
+\begin{lstlisting}[language=Python, numbers=left, breaklines=true, basicstyle=\ttfamily\footnotesize, frame=single, caption=実行結果12,label=result]
+(base) asahinatarou@talol report3 % /opt/miniconda3/bin/python /Users/taro/StuLab1/report3/sample12.py
+3.0
+nan
+\end{lstlisting}
+\newpage
+
+\subsection{問13}
+\lstinputlisting[language=Python, numbers=left, breaklines=true, basicstyle=\ttfamily\footnotesize, frame=single, caption=サンプルプログラム13, 
+label=pg:sample]{sample13.py}
+
+\begin{lstlisting}[language=Python, numbers=left, breaklines=true, basicstyle=\ttfamily\footnotesize, frame=single, caption=実行結果13,label=result]
+(base) asahinatarou@talol report3 % /opt/miniconda3/bin/python /Users/taro/StuLab1/report3/sample13.py
+[  0.   1.   2. -inf]
+\end{lstlisting}
+
+\subsection{問14}
+\lstinputlisting[language=Python, numbers=left, breaklines=true, basicstyle=\ttfamily\footnotesize, frame=single, caption=サンプルプログラム14, 
+label=pg:sample]{sample14.py}
+
+\begin{lstlisting}[language=Python, numbers=left, breaklines=true, basicstyle=\ttfamily\footnotesize, frame=single, caption=実行結果14,label=result]
+(base) asahinatarou@talol report3 % /opt/miniconda3/bin/python /Users/taro/StuLab1/report3/sample14.py
+1.5707963267948966
+-1.5707963267948966
+nan
+\end{lstlisting}
+
+\section{課題C}
+\lstinputlisting[language=Python, numbers=left, breaklines=true, basicstyle=\ttfamily\footnotesize, frame=single, caption=サンプルプログラムC, 
+label=pg:sample]{sampleC.py}
+
+\begin{lstlisting}[language=Python, numbers=left, breaklines=true, basicstyle=\ttfamily\footnotesize, frame=single, caption=実行結果C,label=result]
+(base) asahinatarou@talol report3 % /opt/miniconda3/bin/python /Users/taro/StuLab1/report3/sampleC.py
+3.141592653589793
+12.566370614359172
+nan
+\end{lstlisting}
+
+
+\begin{thebibliography}{99}
+\bibitem{kunita} 國田 樹, 2021\_StuLab1\_理工系のレポート作成技術 , 2021/05/15.
+\bibitem{Numpy} Numpy,https://numpy.org/doc/stable/reference/generated/numpy.log.html, 2021/05/15
+\bibitem{Numpy} Numpy,https://numpy.org/doc/stable/reference/generated/numpy.arcsin.html,2021/05/15
+\bibitem{teratail} Python - RuntimeWarningのエラー｜teratail, https://teratail.com/questions/78705,2021/05/15.
+\bibitem{rep1} 朝比奈 太郎, rep1\_205713.tex, 2021/05/15.
+\bibitem{rep2} 朝比奈 太郎, rep2\_205713.tex, 2021/05/15.
+\end{thebibliography}
+
+\end{document}

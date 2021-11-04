@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}目的}{2}{}%
+\contentsline {section}{\numberline {2}方法}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Numpyのadd関数を使用する場合}{2}{}%
+\contentsline {subsection}{\numberline {2.2}加算演算子(+)を使用する場合}{2}{}%
+\contentsline {section}{\numberline {3}結果}{3}{}%
+\contentsline {subsection}{\numberline {3.1}(1,N)の1次元行列}{3}{}%
+\contentsline {subsection}{\numberline {3.2}(M,M)の2次元行列}{4}{}%
+\contentsline {subsection}{\numberline {3.3}ソースコード}{5}{}%
+\contentsline {section}{\numberline {4}考察}{5}{}%

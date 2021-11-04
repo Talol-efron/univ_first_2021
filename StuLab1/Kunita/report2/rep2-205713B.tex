@@ -1,0 +1,66 @@
+\documentclass[a4paper, 11pt, titlepage]{jsarticle}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{listings}
+
+\title {知能情報実験1 : レポート課題2}
+\author{205713B  朝比奈 太郎}
+\date{\today }
+
+\begin{document}
+\maketitle
+\tableofcontents
+\clearpage
+
+\section{レポート作成技術に関する課題}
+\subsection{レポートに参考文献を記載する目的}
+
+学術論文や書籍の執筆などにおいて、他者の意見や研究成果、周知の事実の確認等のために参考文献は重要である。
+
+研究の場合、過去の誰かの先行研究と、自身の研究内容が重複しないようにする確認や、過去にいかなる研究がいかなる論証・プロセスを経て行われ、現在の学説や理論が構築されてきたかを概観する「研究史の整理」、またその後の分析、解釈の段階にいたるまで、参考文献は極めて重大な役割をもっている[3][4][5]。
+
+\subsection{レポートにおける不正行為}
+参考文献の文献情報の記述が不十分であると、参考文献の原文を探し当てることができなかったり、どこに文献情報の記載があるのか見つけるのが難しかったりということになってします恐れがあるから。これでは読者にも、参考文献著者にも失礼である。
+\subsection{参考文献と表示項目と表示例}
+\subsubsection{雑誌中の論文}
+著者名, 論文名.誌名, 出版名.巻数,号年,はじめのページ-おわりのページ.
+\subsubsection{電子ジャーナル中の論文}
+著者名, 論文名.誌名, 出版名.巻数,号年,はじめのページ-おわりのページ, (媒体表示),入手先(入手日付).
+\subsubsection{単行本}
+著者名, 書名, 版表示,出版地,出版者,出版年,総ページ数,(シリーズ名,シリーズ番号), ISBN.
+\subsubsection{論文集(単行本)中の論文}
+著者名, 論文名.誌名, 編集者,出版地,出版者,出版年,はじめのページ-おわりのページ
+\subsubsection{Webサイト中の記事}
+著者名,"ウェブページの題名".ウェブサイトの名称.更新日付.入手先,(入手日付).
+
+\section{シェルスクリプトプログラミングに関する課題}
+\subsection{スクリプトと実行例}
+\lstinputlisting[language=C, numbers=left, breaklines=true, basicstyle=\ttfamily\footnotesize, frame=single, caption=スクリプト, 
+label=pg:sample]{rep2-205713B.sh}
+
+\begin{lstlisting}[language=C, numbers=left, breaklines=true, basicstyle=\ttfamily\footnotesize, frame=single, caption=実行結果,label=result]
+12
+47
+48
+56
+90
+さあここで、あなたが入力した文字の要素数は何個でしょうか？
+直感で答えてください:9
+不正解。。
+あなたが入力した文字の要素数は5個でした
+\end{lstlisting}
+\newpage
+
+\subsection{課題の意図}
+シェルスクリプトプログラミングは、他の言語より制約は大きいが、for文やif文などの考え方はほとんど変わらないということをわかってもらうために、インデントを設け、なるべく他言語と似るようにした。またプログラミングは挫折率が他の分野よりも高いことから、楽しく学び自身でどんどんコーディングしていくことでプログラミング力が養われていくと考えたので、ユーザーに実際に入力させてユーザー自身の回答とコンピュータが出力した答えがあっているかといったゲーム性を持たせた。
+\subsection{課題の難しさや工夫点}
+今回は来年の実験1でこのプログラムが採用されることを想定して、生徒自身が成功体験をしてほしいと考えたため、やや容易に設定した。工夫した点は、授業で習ったことだけではなく+$\alpha $で自分で調べて学んでほしいと考えたため授業でまだ登場していない\textbf{read}, \textbf{-n}を用いた。
+\newpage
+\begin{thebibliography}{99}
+\bibitem{wiki} 参考文献 - Wikipedia, https://ja.wikipedia.org/wiki/参考文献/,   2021/04/29.
+\bibitem{SIST} SIST, http://sist-jst.jp/note/92.html/,   2021/04/29.
+\bibitem{SIST}参考文献 - 科学技術情報プラットフォーム,https://jipsti.jst.go.jp/sist/pdf/SIST\_booklet2011.pdf/,   2021/04/29.
+\bibitem{Qiita} TeXでソースコードを埋め込む - Qiita, https://qiita.com/ayihis@github/items/c779e4ab5cd7580f1f87/, 2021/04/29.
+\bibitem{kunita} 國田樹, 理工系のレポート作成, 琉球大学工学部工学科知能情報コース2021年度知能情報実験1授業資料,  2021/04/29.
+\bibitem{read}【Linux】シェルスクリプトでキーボード入力を受付ける方法,https://eng-entrance.com/linux-shellscript-keyboard
+\end{thebibliography}
+\end{document}

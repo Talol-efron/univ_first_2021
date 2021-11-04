@@ -1,0 +1,27 @@
+\documentclass[11pt]{jsarticle}
+\usepackage{amsmath}
+\begin{document}
+レポート4
+\begin{flushright}
+\today
+\end{flushright}
+\begin{flushright}
+  205713B\ 朝比奈太郎
+\end{flushright}
+母分散が未知なので、検定統計量Tは自由度n-1のt分布に従う。
+\[
+T_0 = \frac{\bar X - \mu}{\sqrt{4/n}}
+\]
+帰無仮説$\mu=0$に対して有意水準5\%の片側検定なので、上側0.05点は、
+\[
+t(n-1, 0.05) = \frac{\bar x}{\sqrt{4/n}}
+\]
+検出力が0.9以上なので、対立仮説$\mu=1$に対して下側0.1点を考えれば良いから
+\[
+-t(n-1, 0.1)>= \frac{\bar x-1}{\sqrt{4/n}} = t(n-1, 0.05) - \frac{1}{\sqrt{4/n}}
+\]
+\[
+\frac{t(n-1,0.05)+t(n-1,0.1)}{\sqrt{n}}>=1/2
+\]
+t分布と照らし合わせると、n=35のとき左辺は0.50673で、n=36のとき左辺は0.4993となり、36以上の標本数が必要であるといえる。
+\end{document}
