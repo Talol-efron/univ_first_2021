@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/taro/StuLab1/Akamine/2/venv"
+VIRTUAL_ENV="/Users/taro/univ_first_2021/StuLab1/Akamine/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
